@@ -5,7 +5,7 @@ import cookieParser from "cookie-parser";
 import authRoute from "./routes/auth.js";
 import hotelsRoute from "./routes/hotels.js";
 import roomsRoute from "./routes/rooms.js";
-import usersRoute from "./routes/hotels.js";
+import usersRoute from "./routes/users.js";
 const app = express();
 dotenv.config();
 
