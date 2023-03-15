@@ -1,5 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
+import cors from "cors";
 import mongoose from "mongoose";
 import cookieParser from "cookie-parser";
 import authRoute from "./routes/auth.js";
@@ -28,6 +29,7 @@ mongoose.connection.on("connected", () => {
 //Middleware
 app.use(cookieParser());
 app.use(express.json());
+app.use(cors());
 
 app.use("/api/auth", authRoute);
 app.use("/api/rooms", roomsRoute);
